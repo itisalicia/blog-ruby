@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
   root "articles#index"
-  get "/articles", to: "articles#index"
-  # get "up" => "rails/health#show", as: :rails_health_check
+  resources :articles
+
+  # In more details, the resources method is a shorthand for defining RESTful routes :
+  # get "/articles", to: "articles#index"
+  # get "/articles/:id", to: "articles#show"
 end
